@@ -1,22 +1,10 @@
 # Titled Games Website
 
-**We Do Games** - Official website for Titled Games.
+**We do games** - Official website for Titled Games.
 
 ## Website
 
 Visit us at: [https://titledgames.github.io](https://titledgames.github.io)
-
-## Contents
-
-- [About](#about)
-- [Features](#features)
-- [File Structure](#file-structure)
-- [Editing the Website](#editing-the-website)
-- [Sections](#sections)
-- [Customization Guide](#customization-guide)
-- [Deployment](#deployment)
-- [Browser Support](#browser-support)
-- [Contributing](#contributing)
 
 ## About
 
@@ -33,47 +21,6 @@ titledgames.github.io/
 ├── README.md           # This file - documentation for the team
 └── LICENSE             # Open source license
 ```
-
-## Sections
-
-### Navigation Bar
-- Fixed at the top of the page
-- Smooth scrolling to sections
-- Mobile-friendly hamburger menu
-- **Edit in**: `index.html` (lines ~20-45)
-
-### Hero Section
-- Main landing area with animated particles
-- Company name and motto
-- Call-to-action buttons
-- **Edit in**: `index.html` (lines ~47-85)
-- **Particle settings**: `script.js` (lines ~60-80)
-
-### About Section
-- Company information
-- Core values (Innovation, Creativity, Passion)
-- **Edit in**: `index.html` (lines ~87-125)
-
-### Games Section
-- Showcase of upcoming games
-- Status badges (Coming Soon, In Development)
-- WIP notice with GitHub link
-- **Edit in**: `index.html` (lines ~127-195)
-
-### Team Section
-- Join the team information
-- Open positions
-- **Edit in**: `index.html` (lines ~197-235)
-
-### Contact Section
-- Social links (GitHub)
-- **Edit in**: `index.html` (lines ~237-260)
-
-### Footer
-- Quick links
-- Copyright information
-- GitHub link
-- **Edit in**: `index.html` (lines ~262-290)
 
 ## Customization Guide
 
