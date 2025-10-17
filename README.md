@@ -1,12 +1,12 @@
 # Titled Games Website
 
-🎮 **We Do Games** - Official website for Titled Games, a startup game company.
+**We Do Games** - Official website for Titled Games.
 
-## 🌐 Live Website
+## Website
 
 Visit us at: [https://titledgames.github.io](https://titledgames.github.io)
 
-## 📋 Table of Contents
+## Contents
 
 - [About](#about)
 - [Features](#features)
@@ -18,21 +18,11 @@ Visit us at: [https://titledgames.github.io](https://titledgames.github.io)
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
 
-## 🎯 About
+## About
 
-This is the official website for Titled Games, showcasing our company, values, and upcoming games. The site is built with vanilla HTML, CSS, and JavaScript for maximum compatibility and ease of maintenance.
+This is the official website for Titled Games. The site is built with vanilla HTML, CSS, and JavaScript for maximum compatibility and ease of maintenance.
 
-## ✨ Features
-
-- **Modern, Dynamic Design**: Animated particles, smooth transitions, and engaging visual effects
-- **Fully Responsive**: Works seamlessly on desktop, tablet, and mobile devices
-- **Well-Documented Code**: Extensive comments throughout all files for easy maintenance
-- **Performance Optimized**: Minimal dependencies, fast load times, optimized animations
-- **Accessibility**: Semantic HTML, keyboard navigation support, high contrast mode support
-- **GitHub Integration**: Links back to our GitHub organization
-- **WIP Status**: Clear indicators that games are in development
-
-## 📁 File Structure
+## Site Structure
 
 ```
 titledgames.github.io/
@@ -44,52 +34,7 @@ titledgames.github.io/
 └── LICENSE             # Open source license
 ```
 
-## 🛠️ Editing the Website
-
-### Prerequisites
-
-- A text editor (VS Code, Sublime Text, etc.)
-- Basic knowledge of HTML/CSS/JavaScript
-- A web browser for testing
-
-### Making Changes
-
-1. **Clone the repository** (if you haven't already):
-   ```bash
-   git clone https://github.com/titledgames/titledgames.github.io.git
-   cd titledgames.github.io
-   ```
-
-2. **Open the files in your editor**:
-   - `index.html` - Edit content and structure
-   - `styles.css` - Modify colors, spacing, animations
-   - `script.js` - Change interactive behaviors
-
-3. **Test locally**:
-   - Simply open `index.html` in a web browser
-   - Or use a local server (recommended):
-     ```bash
-     # Python 3
-     python -m http.server 8000
-     
-     # Python 2
-     python -m SimpleHTTPServer 8000
-     
-     # Node.js (if you have http-server installed)
-     npx http-server
-     ```
-   - Visit `http://localhost:8000` in your browser
-
-4. **Commit and push changes**:
-   ```bash
-   git add .
-   git commit -m "Description of changes"
-   git push origin main
-   ```
-
-5. **Changes go live automatically** via GitHub Pages (usually within a few minutes)
-
-## 📑 Sections
+## Sections
 
 ### Navigation Bar
 - Fixed at the top of the page
@@ -130,7 +75,7 @@ titledgames.github.io/
 - GitHub link
 - **Edit in**: `index.html` (lines ~262-290)
 
-## 🎨 Customization Guide
+## Customization Guide
 
 ### Changing Colors
 
@@ -199,7 +144,7 @@ const colors = [
 ];
 ```
 
-## 🚀 Deployment
+## Deployment
 
 This site is automatically deployed via **GitHub Pages**:
 
@@ -213,91 +158,8 @@ This site is automatically deployed via **GitHub Pages**:
 - **Custom Domain**: Not configured (using default GitHub Pages URL)
 - **HTTPS**: Automatically enabled
 
-## 🌐 Browser Support
-
-The website is tested and works on:
-
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 👥 Contributing
-
-We welcome contributions from the team! Here's how:
-
-1. **Create a branch** for your changes:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-2. **Make your changes** and test thoroughly
-
-3. **Commit with a clear message**:
-   ```bash
-   git commit -m "Add: description of what you added"
-   ```
-
-4. **Push to GitHub**:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-5. **Create a Pull Request** on GitHub
-
-### Coding Standards
-
-- Use clear, descriptive comments
-- Follow the existing code structure
-- Test on multiple browsers and devices
-- Keep commits focused and atomic
-- Update this README if adding major features
-
-## 📝 Common Tasks
-
-### Update Company Motto
-Edit `index.html` line ~70 and footer line ~276
-
-### Change Hero Background
-Edit `styles.css` lines related to `.hero` (around line 160)
-
-### Add a New Section
-1. Add HTML structure in `index.html`
-2. Add CSS styling in `styles.css`
-3. Add navigation link in the navbar
-4. Update this README
-
-### Modify Mobile Breakpoints
-Edit media queries in `styles.css` (starting line 850)
-
-## 🐛 Troubleshooting
-
-### Changes not appearing?
-- Hard refresh your browser (Ctrl+F5 or Cmd+Shift+R)
-- Wait a few minutes for GitHub Pages to rebuild
-- Check browser console for errors
-
-### Mobile menu not working?
-- Check `script.js` is properly linked in `index.html`
-- Verify no JavaScript errors in console
-
-### Particles not showing?
-- Check browser console for errors
-- Verify the particles container exists in HTML
-- Check if animations are disabled in browser settings
-
-## 📞 Support
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/titledgames/titledgames.github.io/issues)
-- **Organization**: [github.com/titledgames](https://github.com/titledgames)
-
-## 📄 License
-
-This project is licensed under the terms in the LICENSE file.
-
 ---
 
-**Made with ❤️ by the Titled Games team**
+**Made with by the Titled Games team**
 
-*Last updated: 2024*
+*Last updated: 2025*
