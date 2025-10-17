@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titled Games - We do games.">
+    <meta name="keywords" content="games, gaming, game development, titled games">
+    <meta name="author" content="Titled Games">
+    <title>Titled Games | We Do Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 
+        NAVIGATION SECTION
+        - Fixed navigation bar that stays at the top
+        - Contains logo and navigation links
+        - Responsive design for mobile devices
+    -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">Titled Games</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        HERO SECTION
+        - Main landing section with animated background
+        - Contains company motto and call-to-action
+        - Particles animation creates dynamic effect
+    -->
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Titled Games">Titled Games</h1>
+            <p class="tagline">We Do Games</p>
+            <p class="subtitle">Creating the next gen gaming experience!</p>
+            <div class="cta-buttons">
+                <a href="#games" class="btn btn-primary">Explore Our Games</a>
+                <a href="https://github.com/titledgames" target="_blank" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        ABOUT SECTION
+        - Company mission and vision
+        - Key values and what makes us unique
+        - Animated on scroll
+    -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">We are Titled Games, a passionate startup game company dedicated to creating unique and innovative gaming experiences.</p>
+                    <p>Founded by a team of gaming enthusiasts, we believe in pushing the boundaries of interactive entertainment. Our mission is to craft games that not only entertain but also inspire and connect people around the world.</p>
+                    <div class="values">
+                        <div class="value-item">
+                            <div class="value-icon">🚀</div>
+                            <h3>Innovation</h3>
+                            <p>Pushing boundaries with creative gameplay</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">🎨</div>
+                            <h3>Creativity</h3>
+                            <p>Unique art styles and storytelling</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">❤️</div>
+                            <h3>Passion</h3>
+                            <p>Made by gamers, for gamers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        GAMES SECTION
+        - Showcase of current and upcoming games
+        - Cards with hover effects
+        - Clear indication that games are in development
+    -->
+    <section id="games" class="games">
+        <div class="container">
+            <h2 class="section-title">Our Games</h2>
+            <p class="section-subtitle">We're cooking up something special! Our games are currently in development.</p>
+            
+            <div class="games-grid">
+                
+            </div>
+
+            <div class="wip-notice">
+                <p>All games are currently works in progress. Follow us on <a href="https://github.com/titledgames" target="_blank">GitHub</a> for updates!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        CONTACT SECTION
+        - Links to social media and GitHub
+        - Contact information
+    -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="lead">Want to say hi?</p>
+                <div class="social-links">
+                    <a href="https://github.com/titledgames" target="_blank" class="social-link">
+                        <svg width="32" height="32" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        FOOTER SECTION
+        - Copyright information
+        - Quick links
+        - Back to top button
+    -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">Titled Games</span>
+                    <p>We Do Games</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#games">Games</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Titled Games. All rights reserved.</p>
+                <p>
+                    <a href="https://github.com/titledgames" target="_blank">github.com/titledgames</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
