@@ -823,9 +823,3 @@ a {
         border-width: 3px;
     }
 }
-
-.widget-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 20px;
-}
