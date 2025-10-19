@@ -706,7 +706,195 @@ a {
 }
 
 /* ============================================
-   11. RESPONSIVE DESIGN
+   11. SEASONAL DECORATIONS
+   Themed decorations for holidays
+   ============================================ */
+
+/* Base styles for all seasonal decorations */
+.seasonal-decoration {
+    position: absolute;
+    font-size: 2rem;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+}
+
+/* ========== HALLOWEEN THEME ========== */
+
+/* Orange accent overlay for Halloween */
+.halloween-theme {
+    --accent-halloween: #FF6B1A;
+}
+
+.halloween-theme .primary-color {
+    filter: hue-rotate(20deg);
+}
+
+/* Pumpkin decorations in hero section */
+.halloween-pumpkin {
+    font-size: 4rem;
+    animation: bob 3s ease-in-out infinite;
+}
+
+.halloween-left {
+    left: 5%;
+    bottom: 10%;
+}
+
+.halloween-right {
+    right: 5%;
+    bottom: 10%;
+}
+
+@keyframes bob {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Flying bats */
+.halloween-bat {
+    font-size: 1.5rem;
+    animation: fly-bat 20s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fly-bat {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) translateX(200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Floating ghost in navbar */
+.halloween-ghost {
+    font-size: 1.5rem;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: ghost-float 4s ease-in-out infinite;
+}
+
+@keyframes ghost-float {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-60%) translateX(10px);
+        opacity: 1;
+    }
+}
+
+/* ========== CHRISTMAS THEME ========== */
+
+/* Festive color accents */
+.christmas-theme {
+    --accent-christmas-red: #C41E3A;
+    --accent-christmas-green: #165B33;
+}
+
+/* Add subtle festive glow to primary elements */
+.christmas-theme .btn-primary {
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+}
+
+.christmas-theme .btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(196, 30, 58, 0.6);
+}
+
+/* Christmas trees in hero section */
+.christmas-tree {
+    font-size: 4rem;
+    animation: tree-sway 4s ease-in-out infinite;
+}
+
+@keyframes tree-sway {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+/* Falling snowflakes */
+.christmas-snowflake {
+    font-size: 1.5rem;
+    animation: snowfall 15s linear infinite;
+    opacity: 0.9;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Santa hat on logo */
+.christmas-santa {
+    font-size: 1.2rem;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    animation: santa-bounce 2s ease-in-out infinite;
+}
+
+@keyframes santa-bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-15deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-20deg);
+    }
+}
+
+/* Present decoration */
+.christmas-present {
+    font-size: 2rem;
+    margin-left: 10px;
+    display: inline-block;
+    animation: present-wiggle 3s ease-in-out infinite;
+}
+
+@keyframes present-wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+/* ============================================
+   12. RESPONSIVE DESIGN
    Media queries for different screen sizes
    ============================================ */
 
@@ -803,6 +991,32 @@ a {
         right: 20px;
         width: 45px;
         height: 45px;
+    }
+    
+    /* Adjust seasonal decorations for mobile */
+    .halloween-pumpkin,
+    .christmas-tree {
+        font-size: 2.5rem;
+    }
+    
+    .halloween-left,
+    .christmas-left {
+        left: 2%;
+    }
+    
+    .halloween-right,
+    .christmas-right {
+        right: 2%;
+    }
+    
+    .halloween-ghost {
+        display: none; /* Hide on mobile to avoid clutter */
+    }
+    
+    .christmas-santa {
+        font-size: 1rem;
+        top: -5px;
+        right: -10px;
     }
 }
 

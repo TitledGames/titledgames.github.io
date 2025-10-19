@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initScrollAnimations();
     initBackToTop();
+    initSeasonalDecorations();
 });
 
 // ============================================
@@ -172,6 +173,131 @@ function initBackToTop() {
             behavior: 'smooth'
         });
     });
+}
+
+// ============================================
+// SEASONAL DECORATIONS
+// Adds themed decorations based on the current month
+// ============================================
+function initSeasonalDecorations() {
+    const currentMonth = new Date().getMonth(); // 0-11 (0 = January, 9 = October, 11 = December)
+    
+    // October = Halloween decorations
+    if (currentMonth === 9) {
+        applyHalloweenTheme();
+    }
+    // December = Christmas decorations
+    else if (currentMonth === 11) {
+        applyChristmasTheme();
+    }
+}
+
+/**
+ * Applies Halloween theme decorations
+ * Active during October (month index 9)
+ */
+function applyHalloweenTheme() {
+    document.body.classList.add('halloween-theme');
+    
+    // Add pumpkins to hero section
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        const pumpkinLeft = createDecoration('🎃', 'halloween-pumpkin halloween-left');
+        const pumpkinRight = createDecoration('🎃', 'halloween-pumpkin halloween-right');
+        heroContent.appendChild(pumpkinLeft);
+        heroContent.appendChild(pumpkinRight);
+    }
+    
+    // Add floating bats
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+        for (let i = 0; i < 8; i++) {
+            const bat = createDecoration('🦇', 'halloween-bat');
+            const randomX = Math.random() * 100;
+            const randomDelay = Math.random() * 5;
+            const randomDuration = 15 + Math.random() * 10;
+            
+            bat.style.left = `${randomX}%`;
+            bat.style.animationDelay = `${randomDelay}s`;
+            bat.style.animationDuration = `${randomDuration}s`;
+            
+            particlesContainer.appendChild(bat);
+        }
+    }
+    
+    // Add spooky ghost
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const ghost = createDecoration('👻', 'halloween-ghost');
+        navbar.appendChild(ghost);
+    }
+}
+
+/**
+ * Applies Christmas theme decorations
+ * Active during December (month index 11)
+ */
+function applyChristmasTheme() {
+    document.body.classList.add('christmas-theme');
+    
+    // Add Christmas trees to hero section
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        const treeLeft = createDecoration('🎄', 'christmas-tree christmas-left');
+        const treeRight = createDecoration('🎄', 'christmas-tree christmas-right');
+        heroContent.appendChild(treeLeft);
+        heroContent.appendChild(treeRight);
+    }
+    
+    // Add snowflakes
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+        const snowflakeEmojis = ['❄️', '❅', '❆'];
+        for (let i = 0; i < 20; i++) {
+            const snowflake = createDecoration(
+                snowflakeEmojis[Math.floor(Math.random() * snowflakeEmojis.length)],
+                'christmas-snowflake'
+            );
+            const randomX = Math.random() * 100;
+            const randomDelay = Math.random() * 5;
+            const randomDuration = 10 + Math.random() * 10;
+            
+            snowflake.style.left = `${randomX}%`;
+            snowflake.style.animationDelay = `${randomDelay}s`;
+            snowflake.style.animationDuration = `${randomDuration}s`;
+            
+            particlesContainer.appendChild(snowflake);
+        }
+    }
+    
+    // Add Santa hat to logo
+    const logo = document.querySelector('.nav-brand .logo');
+    if (logo) {
+        const santaHat = createDecoration('🎅', 'christmas-santa');
+        logo.parentElement.style.position = 'relative';
+        logo.parentElement.appendChild(santaHat);
+    }
+    
+    // Add presents
+    const footer = document.querySelector('.footer-brand');
+    if (footer) {
+        const present = createDecoration('🎁', 'christmas-present');
+        footer.appendChild(present);
+    }
+}
+
+/**
+ * Helper function to create a decoration element
+ * @param {string} emoji - The emoji to use for decoration
+ * @param {string} className - CSS class name for styling
+ * @returns {HTMLElement} - The created decoration element
+ */
+function createDecoration(emoji, className) {
+    const decoration = document.createElement('span');
+    decoration.textContent = emoji;
+    decoration.className = `seasonal-decoration ${className}`;
+    decoration.setAttribute('aria-hidden', 'true'); // Hide from screen readers
+    return decoration;
 }
 
 // ============================================
