@@ -91,6 +91,55 @@ const colors = [
 ];
 ```
 
+## Seasonal Decorations
+
+The website features automatic seasonal decorations that appear during specific months:
+
+### Halloween Theme (October)
+- **Active Period**: Entire month of October
+- **Decorations**:
+  - 🎃 Pumpkins on either side of the hero section
+  - 🦇 Flying bats across the screen
+  - 👻 Floating ghost in the navigation bar
+- **Visual Effects**: Orange accent colors, bobbing and flying animations
+
+### Christmas Theme (December)
+- **Active Period**: Entire month of December
+- **Decorations**:
+  - 🎄 Christmas trees on either side of the hero section
+  - ❄️ Falling snowflakes throughout the page
+  - 🎅 Santa hat on the navigation logo
+  - 🎁 Present decoration in the footer
+- **Visual Effects**: Festive red/green accents, swaying trees, snowfall animations
+
+### Technical Details
+
+The seasonal themes are:
+- **Automatically activated** based on the current month (detected via JavaScript `Date.getMonth()`)
+- **Consistent with the site design** - decorations use the same modern, animated style as the rest of the site
+- **Performance-optimized** - decorations pause when the browser tab is not visible
+- **Accessible** - decorations are marked with `aria-hidden="true"` so they don't interfere with screen readers
+- **Responsive** - decorations scale appropriately on mobile devices
+
+### Customizing Seasonal Decorations
+
+To modify the seasonal decorations, edit the following files:
+
+**JavaScript** (`script.js`):
+- `initSeasonalDecorations()` - Controls when themes are activated
+- `applyHalloweenTheme()` - Halloween decorations logic
+- `applyChristmasTheme()` - Christmas decorations logic
+
+**CSS** (`styles.css`):
+- Section 11 contains all seasonal decoration styles and animations
+- Each theme has its own subsection with animations
+
+**Adding a New Seasonal Theme**:
+1. Create a new function like `applyYourTheme()` in `script.js`
+2. Add a condition in `initSeasonalDecorations()` for the target month
+3. Add corresponding CSS styles and animations in `styles.css`
+4. Follow the existing pattern of using emoji decorations and CSS animations
+
 ## Deployment
 
 This site is automatically deployed via **GitHub Pages**:
