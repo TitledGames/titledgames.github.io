@@ -7,6 +7,7 @@
  * - Back to top button
  * - Particle animation system
  * - Scroll-based animations
+ * - Seasonal decorations (Halloween in October, Christmas in December)
  * 
  * Well-documented for easy maintenance by the team
  */
@@ -274,7 +275,7 @@ function applyChristmasTheme() {
     const logo = document.querySelector('.nav-brand .logo');
     if (logo) {
         const santaHat = createDecoration('🎅', 'christmas-santa');
-        logo.parentElement.style.position = 'relative';
+        logo.parentElement.classList.add('has-seasonal-decoration');
         logo.parentElement.appendChild(santaHat);
     }
     

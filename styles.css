@@ -719,6 +719,11 @@ a {
     z-index: 10;
 }
 
+/* Container needs relative positioning for seasonal decorations */
+.has-seasonal-decoration {
+    position: relative;
+}
+
 /* ========== HALLOWEEN THEME ========== */
 
 /* Orange accent overlay for Halloween */
@@ -764,7 +769,7 @@ a {
 
 @keyframes fly-bat {
     0% {
-        transform: translateY(100vh) translateX(0) rotate(0deg);
+        transform: translate3d(0, 110vh, 0) rotate(0deg);
         opacity: 0;
     }
     10% {
@@ -774,7 +779,7 @@ a {
         opacity: 0.8;
     }
     100% {
-        transform: translateY(-100px) translateX(200px) rotate(360deg);
+        transform: translate3d(200px, -100px, 0) rotate(360deg);
         opacity: 0;
     }
 }
@@ -822,6 +827,16 @@ a {
     animation: tree-sway 4s ease-in-out infinite;
 }
 
+.christmas-left {
+    left: 5%;
+    bottom: 10%;
+}
+
+.christmas-right {
+    right: 5%;
+    bottom: 10%;
+}
+
 @keyframes tree-sway {
     0%, 100% {
         transform: rotate(-3deg);
@@ -840,7 +855,7 @@ a {
 
 @keyframes snowfall {
     0% {
-        transform: translateY(-100px) rotate(0deg);
+        transform: translate3d(0, -100px, 0) rotate(0deg);
         opacity: 0;
     }
     10% {
@@ -850,7 +865,7 @@ a {
         opacity: 0.9;
     }
     100% {
-        transform: translateY(100vh) rotate(360deg);
+        transform: translate3d(0, 100vh, 0) rotate(360deg);
         opacity: 0;
     }
 }
