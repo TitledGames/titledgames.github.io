@@ -364,11 +364,6 @@ a {
     box-shadow: 0 10px 30px rgba(255, 153, 102, 0.2);
 }
 
-.value-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
-}
-
 .value-item h3 {
     color: var(--light-text);
     margin-bottom: var(--spacing-xs);
