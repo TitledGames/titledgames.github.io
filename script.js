@@ -77,9 +77,9 @@ function initParticles() {
     // Configuration for particle system
     const particleCount = 50; // Number of particles to create
     const colors = [
-        'rgba(108, 99, 255, 0.5)',  // Primary purple
-        'rgba(255, 101, 132, 0.5)', // Secondary pink
-        'rgba(0, 217, 255, 0.5)'    // Accent cyan
+        'rgba(255, 153, 102, 0.3)',  // Primary orange
+        'rgba(255, 153, 102, 0.2)',  // Secondary orange lighter
+        'rgba(255, 153, 102, 0.4)'   // Accent orange darker
     ];
     
     // Create particles
@@ -363,6 +363,6 @@ document.addEventListener('visibilitychange', function() {
 // CONSOLE MESSAGE
 // Fun message for developers who inspect the site
 // ============================================
-console.log('%c🎮 Titled Games', 'font-size: 24px; font-weight: bold; color: #6C63FF;');
-console.log('%cWe Do Games', 'font-size: 16px; color: #FF6584;');
-console.log('%cInterested in joining our team? Check out github.com/titledgames', 'font-size: 12px; color: #00D9FF;');
+console.log('%c🎮 Titled Games', 'font-size: 24px; font-weight: bold; color: #FF9966;');
+console.log('%cWe Do Games', 'font-size: 16px; color: #FF9966;');
+console.log('%cInterested in joining our team? Check out github.com/titledgames', 'font-size: 12px; color: #FF9966;');
