@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Titled Games - We do games.">
-    <meta name="keywords" content="games, gaming, game development, titled games">
+    <meta name="description" content="Titled Games - We do games. Indie game development studio creating innovative gaming experiences including Microwave-Man and more.">
+    <meta name="keywords" content="games, gaming, game development, titled games, indie games, microwave-man, platformer games">
     <meta name="author" content="Titled Games">
+    <meta property="og:title" content="Titled Games | We do games">
+    <meta property="og:description" content="Indie game development studio creating innovative gaming experiences.">
+    <meta property="og:url" content="https://titledgames.project516.dev">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Titled Games | We do games">
+    <meta name="twitter:description" content="Indie game development studio creating innovative gaming experiences.">
+    <link rel="canonical" href="https://titledgames.project516.dev">
     <title>Titled Games | We do games</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpeg">
     <link rel="stylesheet" href="styles.css">
@@ -30,6 +38,9 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#games" class="nav-link">Games</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button id="darkModeToggle" class="nav-link dark-mode-toggle">
+                    <span id="darkModeIcon">🌙</span>
+                </button></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -48,7 +59,9 @@
     <section id="home" class="hero">
         <div class="particles" id="particles"></div>
         <div class="hero-content">
-            <div class="hero-logo">TG</div>
+            <div class="hero-logo hero-logo-image">
+                <img src="favicon.jpeg" alt="Titled Games Logo">
+            </div>
             <h1 class="glitch" data-text="Titled Games">Titled Games</h1>
             <p class="tagline">We do games</p>
             <p class="subtitle">Creating the next gen gaming experience!</p>
@@ -103,13 +116,15 @@
                    <div class="game-card coming-soon">
        <div class="game-image">
            <div class="placeholder-image">
-               <span class="game-icon"></span>
+               <span class="game-icon">🎮</span>
            </div>
        </div>
        <div class="game-info">
            <h3>Microwave-Man!</h3>
            <p>This is a platformer game about a Microwave Robot ascending the map to reach the top while collecting items to microwave.</p> 
-           <span class="status-badge"><iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/4085345"><a href="https://project516.itch.io/microwave-man">Microwave-Man! by Project516</a></iframe></span>
+           <div class="game-action">
+               <a href="microwave-man.html" class="btn btn-primary">Play Now</a>
+           </div>
        </div>
    </div>
             </div>

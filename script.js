@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initBackToTop();
     initSeasonalDecorations();
+    initDarkMode();
 });
 
 // ============================================
@@ -173,6 +174,44 @@ function initBackToTop() {
             top: 0,
             behavior: 'smooth'
         });
+    });
+}
+
+// ============================================
+// DARK MODE TOGGLE
+// Allows users to switch between light and dark themes
+// ============================================
+function initDarkMode() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const body = document.body;
+    
+    if (!darkModeToggle || !darkModeIcon) return;
+    
+    // Check for saved dark mode preference
+    const darkModePreference = localStorage.getItem('darkMode');
+    
+    // Apply saved preference or system preference
+    if (darkModePreference === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeIcon.textContent = '☀️';
+    } else if (darkModePreference === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        body.classList.add('dark-mode');
+        darkModeIcon.textContent = '☀️';
+        localStorage.setItem('darkMode', 'enabled');
+    }
+    
+    // Toggle dark mode on button click
+    darkModeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            darkModeIcon.textContent = '☀️';
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeIcon.textContent = '🌙';
+            localStorage.setItem('darkMode', 'disabled');
+        }
     });
 }
 
