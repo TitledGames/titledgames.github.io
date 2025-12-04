@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Microwave-Man! - A platformer game about a Microwave Robot ascending the map to reach the top while collecting items to microwave.">
+    <meta name="keywords" content="Microwave-Man, platformer game, indie game, Titled Games, Project516">
+    <meta name="author" content="Titled Games, Project516">
+    <meta property="og:title" content="Microwave-Man! | Titled Games">
+    <meta property="og:description" content="A platformer game about a Microwave Robot ascending the map to reach the top while collecting items to microwave.">
+    <meta property="og:url" content="https://titledgames.project516.dev/microwave-man">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Microwave-Man! | Titled Games">
+    <meta name="twitter:description" content="A platformer game about a Microwave Robot ascending the map to reach the top while collecting items to microwave.">
+    <title>Microwave-Man! | Titled Games</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to game page */
+        .game-page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--dark-secondary);
+            padding-top: 80px;
+        }
+        
+        .game-page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+        
+        .game-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--light-text);
+            margin-bottom: var(--spacing-sm);
+            text-align: center;
+        }
+        
+        .game-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-text);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .game-player {
+            background: var(--dark-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .game-player h2 {
+            color: var(--light-text);
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .game-embed {
+            display: flex;
+            justify-content: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .game-embed iframe {
+            max-width: 100%;
+            border-radius: var(--radius-md);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .game-widget {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--spacing-lg);
+        }
+        
+        .game-widget iframe {
+            max-width: 100%;
+            border-radius: var(--radius-md);
+        }
+        
+        .game-description {
+            background: var(--dark-secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .game-description h2 {
+            color: var(--light-text);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .game-description p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .game-page-content {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+            
+            .game-embed iframe {
+                width: 100% !important;
+                height: auto !important;
+                aspect-ratio: 640/380;
+            }
+            
+            .game-widget iframe {
+                width: 100% !important;
+                height: auto !important;
+                aspect-ratio: 552/167;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">TG</span>
+                    Titled Games
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#games" class="nav-link">Games</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><button id="darkModeToggle" class="nav-link" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                    <span id="darkModeIcon">🌙</span>
+                </button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Page Content -->
+    <div class="game-page-hero">
+        <div class="game-page-content">
+            <a href="index.html#games" class="back-link">← Back to Games</a>
+            <h1 class="game-title">Microwave-Man!</h1>
+            <p class="game-subtitle">A unique platformer adventure</p>
+        </div>
+    </div>
+
+    <div class="game-page-content">
+        <!-- Game Player Section -->
+        <div class="game-player">
+            <h2>Play Now</h2>
+            <div class="game-embed">
+                <iframe frameborder="0" src="https://itch.io/embed-upload/15711412?color=dcdada" allowfullscreen="" width="640" height="380"><a href="https://project516.itch.io/microwave-man">Play Microwave-Man! on itch.io</a></iframe>
+            </div>
+        </div>
+
+        <!-- Game Description -->
+        <div class="game-description">
+            <h2>About the Game</h2>
+            <p>Microwave-Man! is a platformer game about a Microwave Robot ascending the map to reach the top while collecting items to microwave.</p>
+            <p>Navigate through challenging levels, collect items, and help Microwave-Man reach new heights in this exciting adventure!</p>
+        </div>
+
+        <!-- Game Widget -->
+        <div class="game-widget">
+            <iframe frameborder="0" src="https://itch.io/embed/4085345?linkback=true&amp;bg_color=dcdada&amp;fg_color=222222&amp;link_color=efb945&amp;border_color=b0aeae" width="552" height="167"><a href="https://project516.itch.io/microwave-man">Microwave-Man! by Project516, Titled Games</a></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">
+                        <span class="logo-icon">TG</span>
+                        Titled Games
+                    </span>
+                    <p>We do games</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#games">Games</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Titled Games. All rights reserved.</p>
+                <p>
+                    <a href="https://github.com/titledgames" target="_blank">github.com/titledgames</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

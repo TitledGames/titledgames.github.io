@@ -32,7 +32,7 @@
     --secondary-color: #FF9966;
     --accent-color: #FF9966;
     
-    /* Neutral Colors */
+    /* Neutral Colors - Light Mode */
     --dark-bg: #FFFFFF;
     --dark-secondary: #F5F5F5;
     --dark-accent: #EEEEEE;
@@ -61,6 +61,48 @@
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    /* Neutral Colors - Dark Mode */
+    --dark-bg: #1a1a1a;
+    --dark-secondary: #2a2a2a;
+    --dark-accent: #3a3a3a;
+    --light-text: #e0e0e0;
+    --gray-text: #b0b0b0;
+    --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+/* Dark mode specific adjustments */
+body.dark-mode .navbar {
+    background: rgba(26, 26, 26, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .particle {
+    background: rgba(255, 153, 102, 0.4);
+}
+
+body.dark-mode .hero {
+    background: var(--dark-bg);
+}
+
+body.dark-mode .game-card {
+    border-color: var(--dark-accent);
+}
+
+body.dark-mode .game-card:hover {
+    box-shadow: 0 15px 40px rgba(255, 153, 102, 0.2);
+}
+
+body.dark-mode .social-link {
+    background: var(--dark-accent);
+}
+
+body.dark-mode .footer {
+    background: var(--dark-secondary);
+    border-top-color: var(--dark-accent);
 }
 
 /* ============================================
