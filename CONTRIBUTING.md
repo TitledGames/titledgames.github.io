@@ -260,7 +260,7 @@ Write clear commit messages:
 - `Update about section with new mission statement`
 - `Improve animation performance on scroll`
 
- **Bad Examples:**
+**Bad Examples:**
 - `fix`
 - `update`
 - `changes`
