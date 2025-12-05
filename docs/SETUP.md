@@ -430,8 +430,6 @@ Before you start contributing, make sure you have:
 
 ---
 
-**Congratulations!** 🎉 You're all set up and ready to contribute to Titled Games!
+**Congratulations!** You're all set up and ready to contribute to Titled Games!
 
 If you run into any issues, don't hesitate to ask for help in our [Discord](https://dsc.gg/titledgames) or on [GitHub](https://github.com/TitledGames/website/issues).
-
-Welcome to the team! 🚀🎮
