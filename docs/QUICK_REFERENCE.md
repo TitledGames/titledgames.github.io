@@ -2,7 +2,7 @@
 
 A quick reference for common tasks when working on the Titled Games website.
 
-## 🎨 Common CSS Changes
+## Common CSS Changes
 
 ### Change Primary Color
 ```css
@@ -67,7 +67,7 @@ A quick reference for common tasks when working on the Titled Games website.
 
 ---
 
-## 📝 Common HTML Changes
+## Common HTML Changes
 
 ### Add a New Section
 ```html
@@ -134,7 +134,7 @@ A quick reference for common tasks when working on the Titled Games website.
 
 ---
 
-## ⚡ Common JavaScript Tasks
+## Common JavaScript Tasks
 
 ### Select an Element
 ```javascript
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-## 🐛 Debugging Tips
+## Debugging Tips
 
 ### View Console Messages
 1. Press `F12` to open Developer Tools
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-## 📏 Responsive Design Values
+## Responsive Design Values
 
 ### Breakpoints Used in Our CSS
 ```css
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ---
 
-## 🎨 Color Formats
+## Color Formats
 
 ```css
 /* Hex (most common) */
@@ -305,7 +305,7 @@ color: red;
 
 ---
 
-## 📐 Sizing Units
+## Sizing Units
 
 ```css
 /* Absolute units */
@@ -322,7 +322,7 @@ width: 50vh;         /* 50% of viewport height */
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
 ### VS Code
 - `Ctrl+S` / `Cmd+S`: Save file
@@ -360,7 +360,7 @@ git pull origin main
 
 ---
 
-## 🔧 Useful CSS Patterns
+## Useful CSS Patterns
 
 ### Center Element Horizontally
 ```css
@@ -410,7 +410,7 @@ git pull origin main
 
 ---
 
-## 📱 Testing Checklist
+## Testing Checklist
 
 Before submitting changes, test:
 
@@ -427,7 +427,7 @@ Before submitting changes, test:
 
 ---
 
-## 🆘 Quick Fixes
+## Quick Fixes
 
 ### Element Not Centering
 ```css
@@ -469,7 +469,7 @@ gap: 20px;
 
 ---
 
-## 📚 More Help
+## More Help
 
 - **Full Beginner Guide**: [docs/BEGINNER_GUIDE.md](BEGINNER_GUIDE.md)
 - **Contributing Guide**: [CONTRIBUTING.md](../CONTRIBUTING.md)
@@ -477,4 +477,4 @@ gap: 20px;
 
 ---
 
-Remember: Start small, test often, and don't be afraid to experiment! 🚀
+Remember: Start small, test often, and don't be afraid to experiment! 
