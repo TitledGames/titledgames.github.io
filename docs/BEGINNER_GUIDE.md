@@ -455,5 +455,3 @@ Once you're comfortable with the basics:
 4. Explore responsive design for mobile devices
 5. Look into CSS animations and transitions
 6. Study JavaScript frameworks (when you're ready!)
-
-Welcome to the world of web development! 🚀
