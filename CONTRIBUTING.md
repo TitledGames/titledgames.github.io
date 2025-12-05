@@ -5,12 +5,11 @@ Thank you for your interest in contributing to the Titled Games website! This gu
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Development Workflow](#development-workflow)
-3. [Project Structure](#project-structure)
-4. [Making Changes](#making-changes)
-5. [Testing Your Changes](#testing-your-changes)
-6. [Submitting Your Work](#submitting-your-work)
-7. [Code Style Guidelines](#code-style-guidelines)
-8. [Getting Help](#getting-help)
+3. [Making Changes](#making-changes)
+4. [Testing Your Changes](#testing-your-changes)
+5. [Submitting Your Work](#submitting-your-work)
+6. [Code Style Guidelines](#code-style-guidelines)
+7. [Getting Help](#getting-help)
 
 ---
 
@@ -21,7 +20,7 @@ Thank you for your interest in contributing to the Titled Games website! This gu
 You'll need:
 - A GitHub account
 - A text editor (we recommend [VS Code](https://code.visualstudio.com/), [Sublime Text](https://www.sublimetext.com/), or [Notepad++](https://notepad-plus-plus.org/))
-- A web browser (Chrome, Firefox, Safari, or Edge)
+- A web browser (like Chromium and Firefox)
 - Git installed on your computer ([Download Git](https://git-scm.com/))
 
 ### First Time Setup
@@ -85,44 +84,6 @@ Use descriptive names for your branches:
 - `fix-mobile-menu` - When fixing a bug
 - `update-about-section` - When updating content
 - `improve-animations` - When enhancing features
-
----
-
-## Project Structure
-
-```
-website/
-├── index.html          # Main webpage structure
-├── microwave-man.html  # Game-specific page
-├── styles.css          # All styling and visual design
-├── script.js           # Interactive functionality
-├── favicon.jpeg        # Website icon
-├── README.md           # Project overview
-├── CONTRIBUTING.md     # This file!
-├── LICENSE             # Project license
-├── CNAME               # Domain configuration
-└── docs/
-    └── BEGINNER_GUIDE.md  # Learning guide for newcomers
-```
-
-### File Descriptions
-
-**index.html**
-- The main page users see when visiting the site
-- Contains all content: navigation, hero, about, games, contact, footer
-- Heavily commented to explain each section
-- No need to modify unless changing structure or content
-
-**styles.css**
-- Controls all visual aspects: colors, fonts, spacing, animations
-- Organized into sections matching the HTML
-- Uses CSS variables for easy theming
-- Includes responsive design for mobile devices
-
-**script.js**
-- Adds interactivity: menu toggles, animations, scroll effects
-- Well-documented with explanations for each function
-- Includes seasonal decorations and dark mode toggle
 
 ---
 
@@ -293,13 +254,13 @@ Before submitting your changes, test:
 
 Write clear commit messages:
 
-✅ **Good Examples:**
+**Good Examples:**
 - `Add Microwave Man game to homepage`
 - `Fix mobile menu not closing on link click`
 - `Update about section with new mission statement`
 - `Improve animation performance on scroll`
 
-❌ **Bad Examples:**
+**Bad Examples:**
 - `fix`
 - `update`
 - `changes`
@@ -521,5 +482,3 @@ We appreciate your contributions to Titled Games! Every contribution, no matter 
 - Ask questions
 - Have fun!
 - Learn as you go
-
-Happy coding! 🎮🚀

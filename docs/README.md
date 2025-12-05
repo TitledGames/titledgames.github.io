@@ -2,7 +2,7 @@
 
 Welcome to the Titled Games website documentation! This folder contains all the guides and resources you need to contribute to our project.
 
-## 📚 Available Guides
+## Available Guides
 
 ### For Complete Beginners
 
@@ -46,7 +46,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
    - Quick start instructions
    - Links to all resources
 
-## 🗺️ Learning Path
+## Learning Path
 
 ### Path 1: Complete Beginner
 **"I've never done web development before"**
@@ -85,7 +85,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
 
 **Time**: 15-30 minutes to get oriented
 
-## 📖 Documentation by Topic
+## Documentation by Topic
 
 ### Getting Started
 - [Setup Guide](SETUP.md) - First-time installation and setup
@@ -103,7 +103,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
 - [Quick Reference](QUICK_REFERENCE.md) - Fast lookup for common tasks
 - [MDN Web Docs](https://developer.mozilla.org/) - External comprehensive reference
 
-## 🎯 What Should I Read First?
+## What Should I Read First?
 
 **Answer these questions:**
 
@@ -119,7 +119,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
    - No → Read Git section in [SETUP.md](SETUP.md)
    - Yes → Read just the workflow in [CONTRIBUTING.md](../CONTRIBUTING.md)
 
-## 🔍 Finding Information
+## Finding Information
 
 ### I want to...
 
@@ -153,7 +153,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
 **...understand Git commands**
 → [SETUP.md](SETUP.md) + [CONTRIBUTING.md](../CONTRIBUTING.md)
 
-## 📊 Documentation Overview
+## Documentation Overview
 
 | Document | Purpose | Target Audience | Time to Read |
 |----------|---------|-----------------|--------------|
@@ -163,7 +163,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
 | [CONTRIBUTING.md](../CONTRIBUTING.md) | Contribution workflow | All contributors | 15-20 min |
 | [README.md](../README.md) | Project overview | Everyone | 5 min |
 
-## 💡 Tips for Using This Documentation
+## Tips for Using This Documentation
 
 1. **Start with the basics**: Don't skip setup steps
 2. **Keep Quick Reference handy**: Bookmark it for easy access
@@ -172,7 +172,7 @@ Welcome to the Titled Games website documentation! This folder contains all the 
 5. **Ask questions**: Use Discord or GitHub if confused
 6. **Contribute to docs**: Found something unclear? Submit improvements!
 
-## 🆘 Still Need Help?
+## Still Need Help?
 
 If you can't find what you're looking for:
 
@@ -182,7 +182,7 @@ If you can't find what you're looking for:
 4. **Open an issue**: [GitHub Issues](https://github.com/TitledGames/website/issues)
 5. **Start a discussion**: [GitHub Discussions](https://github.com/TitledGames/website/discussions)
 
-## 🔄 Keeping Updated
+## Keeping Updated
 
 Documentation is regularly updated. To stay current:
 
@@ -191,7 +191,7 @@ Documentation is regularly updated. To stay current:
 - **Pull latest changes** regularly: `git pull upstream main`
 - **Join Discord** for announcements
 
-## 📝 Contributing to Documentation
+## Contributing to Documentation
 
 Found a typo? Want to improve an explanation? Documentation contributions are welcome!
 
@@ -201,7 +201,7 @@ Found a typo? Want to improve an explanation? Documentation contributions are we
 4. Add examples when possible
 5. Test links to ensure they work
 
-## 🎮 Ready to Start?
+## Ready to Start?
 
 Based on your experience level:
 
@@ -224,8 +224,4 @@ Start → README.md → CONTRIBUTING.md → Code!
 
 ---
 
-Welcome to Titled Games! We're excited to have you here. 🚀🎮
-
 If you have any questions, don't hesitate to reach out on [Discord](https://dsc.gg/titledgames) or [GitHub](https://github.com/TitledGames/website).
-
-Happy coding!
