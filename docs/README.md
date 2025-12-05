@@ -224,6 +224,4 @@ Start → README.md → CONTRIBUTING.md → Code!
 
 ---
 
-Welcome to Titled Games! We're excited to have you here. �
-
 If you have any questions, don't hesitate to reach out on [Discord](https://dsc.gg/titledgames) or [GitHub](https://github.com/TitledGames/website).
