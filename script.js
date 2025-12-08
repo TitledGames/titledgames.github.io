@@ -196,11 +196,11 @@ function initDarkMode() {
     if (darkModePreference === 'enabled') {
         body.classList.add('dark-mode');
         darkModeIcon.textContent = '☀️';
-        if (logo) logo.src = 'assets/logos/dark.jpeg';
+        if (logo) logo.src = 'assets/logos/dark.png';
     } else if (darkModePreference === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         body.classList.add('dark-mode');
         darkModeIcon.textContent = '☀️';
-        if (logo) logo.src = 'assets/logos/dark.jpeg';
+        if (logo) logo.src = 'assets/logos/dark.png';
         localStorage.setItem('darkMode', 'enabled');
     }
     
@@ -210,11 +210,11 @@ function initDarkMode() {
         
         if (body.classList.contains('dark-mode')) {
             darkModeIcon.textContent = '☀️';
-            if (logo) logo.src = 'assets/logos/dark.jpeg';
+            if (logo) logo.src = 'assets/logos/dark.png';
             localStorage.setItem('darkMode', 'enabled');
         } else {
             darkModeIcon.textContent = '🌙';
-            if (logo) logo.src = 'assets/logos/light.jpeg';
+            if (logo) logo.src = 'assets/logos/light.png';
             localStorage.setItem('darkMode', 'disabled');
         }
     });
