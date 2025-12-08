@@ -185,7 +185,9 @@ function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const darkModeIcon = document.getElementById('darkModeIcon');
     const body = document.body;
-    const logo = document.querySelector('.logo-icon img');
+    const navLogo = document.getElementById('logoImage');
+    const heroLogo = document.getElementById('heroLogoImage');
+    const footerLogo = document.getElementById('footerLogoImage');
     
     if (!darkModeToggle || !darkModeIcon) return;
     
@@ -196,11 +198,15 @@ function initDarkMode() {
     if (darkModePreference === 'enabled') {
         body.classList.add('dark-mode');
         darkModeIcon.textContent = '☀️';
-        if (logo) logo.src = 'assets/logos/dark.png';
+        if (navLogo) navLogo.src = 'assets/logos/dark.png';
+        if (heroLogo) heroLogo.src = 'assets/logos/dark.png';
+        if (footerLogo) footerLogo.src = 'assets/logos/dark.png';
     } else if (darkModePreference === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         body.classList.add('dark-mode');
         darkModeIcon.textContent = '☀️';
-        if (logo) logo.src = 'assets/logos/dark.png';
+        if (navLogo) navLogo.src = 'assets/logos/dark.png';
+        if (heroLogo) heroLogo.src = 'assets/logos/dark.png';
+        if (footerLogo) footerLogo.src = 'assets/logos/dark.png';
         localStorage.setItem('darkMode', 'enabled');
     }
     
@@ -210,11 +216,15 @@ function initDarkMode() {
         
         if (body.classList.contains('dark-mode')) {
             darkModeIcon.textContent = '☀️';
-            if (logo) logo.src = 'assets/logos/dark.png';
+            if (navLogo) navLogo.src = 'assets/logos/dark.png';
+            if (heroLogo) heroLogo.src = 'assets/logos/dark.png';
+            if (footerLogo) footerLogo.src = 'assets/logos/dark.png';
             localStorage.setItem('darkMode', 'enabled');
         } else {
             darkModeIcon.textContent = '🌙';
-            if (logo) logo.src = 'assets/logos/light.png';
+            if (navLogo) navLogo.src = 'assets/logos/light.png';
+            if (heroLogo) heroLogo.src = 'assets/logos/light.png';
+            if (footerLogo) footerLogo.src = 'assets/logos/light.png';
             localStorage.setItem('darkMode', 'disabled');
         }
     });
