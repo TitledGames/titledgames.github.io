@@ -1,5 +1,46 @@
+const RELEASE_CACHE_KEY = 'microwaveManLatestRelease';
+const RELEASE_CACHE_TTL_MS = 60 * 60 * 1000;
+
+function readCachedRelease() {
+    try {
+        const raw = localStorage.getItem(RELEASE_CACHE_KEY);
+        if (!raw) {
+            return null;
+        }
+
+        const parsed = JSON.parse(raw);
+        if (!parsed || typeof parsed.tag !== 'string' || typeof parsed.timestamp !== 'number') {
+            return null;
+        }
+
+        return parsed;
+    } catch (error) {
+        console.warn('Failed to read release cache:', error.message);
+        return null;
+    }
+}
+
+function writeCachedRelease(tag) {
+    try {
+        localStorage.setItem(RELEASE_CACHE_KEY, JSON.stringify({
+            tag,
+            timestamp: Date.now()
+        }));
+    } catch (error) {
+        console.warn('Failed to write release cache:', error.message);
+    }
+}
+
 // Fetch latest Microwave Man release from GitHub
 async function fetchLatestRelease() {
+    const cached = readCachedRelease();
+    const hasFreshCache = cached && (Date.now() - cached.timestamp) < RELEASE_CACHE_TTL_MS;
+
+    if (hasFreshCache) {
+        updateDownloadSection(cached.tag);
+        return;
+    }
+
     try {
         const response = await fetch('https://api.github.com/repos/TitledGames/Microwave-Man/releases');
 
@@ -14,16 +55,25 @@ async function fetchLatestRelease() {
 
         if (latestRelease) {
             const version = latestRelease.tag_name;
+            writeCachedRelease(version);
             updateDownloadSection(version);
         } else {
             // Fallback if no release found
             console.log('No non-prerelease version found, using fallback');
-            updateDownloadSection('1.0.0');
+            if (cached) {
+                updateDownloadSection(cached.tag);
+            } else {
+                updateDownloadSection('1.0.0');
+            }
         }
     } catch (error) {
         console.error('Error fetching releases from GitHub API:', error.message);
-        // Fallback to hardcoded version - download links will still work
-        updateDownloadSection('1.0.0');
+        // Fall back to stale cache if available, then hardcoded default
+        if (cached) {
+            updateDownloadSection(cached.tag);
+        } else {
+            updateDownloadSection('1.0.0');
+        }
     }
 }
 
@@ -41,27 +91,22 @@ function updateDownloadSection(version) {
 
         const links = [
             {
-                icon: '',
                 text: 'Windows',
                 file: 'Microwave-Man-Windows.zip'
             },
             {
-                icon: '',
                 text: 'macOS',
                 file: 'Microwave-Man-MacOS.zip'
             },
             {
-                icon: '',
                 text: 'Linux',
                 file: 'Microwave-Man-Linux.zip'
             },
             {
-                icon: '',
                 text: 'Web',
                 file: 'Microwave-Man-Web.zip'
             },
             {
-                icon: '',
                 text: 'PCK Data',
                 file: 'Microwave-Man.pck'
             }
