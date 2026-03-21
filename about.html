@@ -15,92 +15,8 @@
     <meta name="twitter:description" content="Meet the team behind Titled Games.">
     <title>About Us | Titled Games</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .about-page-hero {
-            min-height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--dark-secondary);
-            padding-top: 80px;
-        }
-
-        .about-page-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: var(--spacing-lg) var(--spacing-md);
-        }
-
-        .about-page-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            color: var(--light-text);
-            text-align: center;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .about-page-subtitle {
-            font-size: 1.25rem;
-            color: var(--gray-text);
-            text-align: center;
-            margin-bottom: 0;
-        }
-
-        .about-mission {
-            background: var(--dark-secondary);
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .about-mission h2 {
-            color: var(--light-text);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .about-mission .lead {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .about-mission p {
-            color: var(--gray-text);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .team-section {
-            background: var(--dark-bg);
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .team-section h2 {
-            color: var(--light-text);
-            text-align: center;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .team-section .lead {
-            color: var(--gray-text);
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            .about-page-content {
-                padding: var(--spacing-md) var(--spacing-sm);
-            }
-
-            .members-row {
-                gap: var(--spacing-md);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -172,7 +88,7 @@
                 </a>
                 <!-- that0nehistoryguy (no GitHub profile) -->
                 <div class="member-card">
-                    <div class="member-avatar-placeholder" aria-label="No profile picture">👤</div>
+                    <div class="member-avatar-placeholder" role="img" aria-label="No profile picture">👤</div>
                     <span class="member-name">that0nehistoryguy</span>
                 </div>
             </div>
@@ -200,7 +116,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 - 2026 Titled Games. All rights reserved.</p>
                 <p>
-                    <a href="https://github.com/titledgames" target="_blank">github.com/titledgames</a>
+                    <a href="https://github.com/titledgames" target="_blank" rel="noopener noreferrer">github.com/titledgames</a>
                 </p>
             </div>
         </div>
@@ -210,6 +126,6 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
