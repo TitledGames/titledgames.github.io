@@ -12,18 +12,27 @@
  * Well-documented for easy maintenance by the team
  */
 
+// April Fools logo spin duration (seconds). Increase for slower spin.
+const APRIL_FOOLS_SPIN_DURATION_SECONDS = 4;
+
 // ============================================
 // INITIALIZATION
 // Wait for DOM to be fully loaded before running scripts
 // ============================================
-document.addEventListener('DOMContentLoaded', function() {
+function initSite() {
+    initSeasonalDecorations();
     initNavigation();
     initParticles();
     initScrollAnimations();
     initBackToTop();
-    initSeasonalDecorations();
     initDarkMode();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSite);
+} else {
+    initSite();
+}
 
 // ============================================
 // NAVIGATION FUNCTIONALITY
@@ -238,9 +247,12 @@ function initSeasonalDecorations() {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 (0 = January, 3 = April, 9 = October, 11 = December)
     const currentDay = today.getDate();
+    const urlParams = new URLSearchParams(window.location.search);
+    const aprilFoolsParam = (urlParams.get('aprilfools') || '').toLowerCase();
+    const forceAprilFoolsTheme = ['1', 'true', 'yes', 'on'].includes(aprilFoolsParam);
     
     // April 1st = April Fools logo spin
-    if (currentMonth === 3 && currentDay === 1) {
+    if ((currentMonth === 3 && currentDay === 1) || forceAprilFoolsTheme) {
         applyAprilFoolsTheme();
     }
     
@@ -261,11 +273,19 @@ function initSeasonalDecorations() {
 function applyAprilFoolsTheme() {
     document.body.classList.add('april-fools-theme');
 
-    // Spin only the main navigation logo image.
-    const mainLogo = document.getElementById('logoImage');
-    if (mainLogo) {
-        mainLogo.classList.add('april-fools-logo-spin');
-    }
+    // Force animation inline so it works even if class-based CSS is overridden or stale.
+    const logos = [
+        document.getElementById('heroLogoImage'),
+        document.getElementById('logoImage')
+    ].filter(Boolean);
+
+    logos.forEach(logo => {
+        logo.classList.add('april-fools-logo-spin');
+        logo.style.animation = `april-fools-logo-spin ${APRIL_FOOLS_SPIN_DURATION_SECONDS}s linear infinite`;
+        logo.style.transformOrigin = 'center';
+        logo.style.willChange = 'transform';
+        logo.style.display = 'block';
+    });
 }
 
 /**

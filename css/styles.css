@@ -129,10 +129,13 @@ body.dark-mode .footer {
     border-radius: 50%;
 }
 
-/* April Fools: spin the main navbar logo clockwise */
+/* April Fools: spin logos clockwise when the theme is active */
+body.april-fools-theme #logoImage,
+body.april-fools-theme #heroLogoImage,
 .april-fools-logo-spin {
-    animation: april-fools-logo-spin 1.8s linear infinite;
+    animation: april-fools-logo-spin 4s linear infinite;
     transform-origin: center;
+    display: block;
 }
 
 @keyframes april-fools-logo-spin {
