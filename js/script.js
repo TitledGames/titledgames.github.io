@@ -247,12 +247,9 @@ function initSeasonalDecorations() {
     const today = new Date();
     const currentMonth = today.getMonth(); // 0-11 (0 = January, 3 = April, 9 = October, 11 = December)
     const currentDay = today.getDate();
-    const urlParams = new URLSearchParams(window.location.search);
-    const aprilFoolsParam = (urlParams.get('aprilfools') || '').toLowerCase();
-    const forceAprilFoolsTheme = ['1', 'true', 'yes', 'on'].includes(aprilFoolsParam);
     
     // April 1st = April Fools logo spin
-    if ((currentMonth === 3 && currentDay === 1) || forceAprilFoolsTheme) {
+    if (currentMonth === 3 && currentDay === 1) {
         applyAprilFoolsTheme();
     }
     
@@ -272,6 +269,7 @@ function initSeasonalDecorations() {
  */
 function applyAprilFoolsTheme() {
     document.body.classList.add('april-fools-theme');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Force animation inline so it works even if class-based CSS is overridden or stale.
     const logos = [
@@ -280,10 +278,17 @@ function applyAprilFoolsTheme() {
     ].filter(Boolean);
 
     logos.forEach(logo => {
-        logo.classList.add('april-fools-logo-spin');
-        logo.style.animation = `april-fools-logo-spin ${APRIL_FOOLS_SPIN_DURATION_SECONDS}s linear infinite`;
-        logo.style.transformOrigin = 'center';
-        logo.style.willChange = 'transform';
+        if (prefersReducedMotion) {
+            logo.classList.remove('april-fools-logo-spin');
+            logo.style.animation = 'none';
+            logo.style.transform = 'none';
+            logo.style.willChange = '';
+        } else {
+            logo.classList.add('april-fools-logo-spin');
+            logo.style.animation = `april-fools-logo-spin ${APRIL_FOOLS_SPIN_DURATION_SECONDS}s linear infinite`;
+            logo.style.transformOrigin = 'center';
+            logo.style.willChange = 'transform';
+        }
         logo.style.display = 'block';
     });
 }
