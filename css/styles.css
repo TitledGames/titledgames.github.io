@@ -129,6 +129,21 @@ body.dark-mode .footer {
     border-radius: 50%;
 }
 
+/* April Fools: spin the main navbar logo clockwise */
+.april-fools-logo-spin {
+    animation: april-fools-logo-spin 1.8s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes april-fools-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Game action container */
 .game-action {
     margin-top: var(--spacing-sm);

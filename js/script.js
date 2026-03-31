@@ -235,15 +235,36 @@ function initDarkMode() {
 // Adds themed decorations based on the current month
 // ============================================
 function initSeasonalDecorations() {
-    const currentMonth = new Date().getMonth(); // 0-11 (0 = January, 9 = October, 11 = December)
+    const today = new Date();
+    const currentMonth = today.getMonth(); // 0-11 (0 = January, 3 = April, 9 = October, 11 = December)
+    const currentDay = today.getDate();
+    
+    // April 1st = April Fools logo spin
+    if (currentMonth === 3 && currentDay === 1) {
+        applyAprilFoolsTheme();
+    }
     
     // October = Halloween decorations
-    if (currentMonth === 9) {
+    else if (currentMonth === 9) {
         applyHalloweenTheme();
     }
     // December = Christmas decorations
     else if (currentMonth === 11) {
         applyChristmasTheme();
+    }
+}
+
+/**
+ * Applies April Fools theme decorations
+ * Active only on April 1st
+ */
+function applyAprilFoolsTheme() {
+    document.body.classList.add('april-fools-theme');
+
+    // Spin only the main navigation logo image.
+    const mainLogo = document.getElementById('logoImage');
+    if (mainLogo) {
+        mainLogo.classList.add('april-fools-logo-spin');
     }
 }
 
